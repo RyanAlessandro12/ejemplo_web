@@ -1,0 +1,187 @@
+﻿@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,600');
+
+
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 100%;
+}
+
+#welcome {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+#welcome header {
+  padding: 2rem 2rem 2rem;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+    
+@media screen and (min-width: 30em) {
+  #welcome header {
+    padding-top: 8vh;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  #welcome header {
+    padding-top: 12vh;
+  }
+}
+
+@media screen and (min-width: 62.5em) {
+  #welcome header {
+    max-width: 900px;
+    margin-left: 5rem;
+  }
+}
+
+#welcome header > div {
+  padding-top: 2rem;
+  padding-left: 2rem;
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+}
+
+#welcome header > div:before {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 3000rem;
+  background: rgba(7, 14, 20, 0.1);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#welcome h1 {
+  color: #070e14;
+  padding-left: 2rem;
+  position: relative;
+  letter-spacing: -2px;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (min-width: 62.5em) {
+  #welcome h1 {
+    font-size: 50px;
+  }
+}
+
+#welcome h1 svg {
+  display: inline-block;
+  width: 0.35em;
+  height: 0.35em;
+  color: #ff5507;
+  fill: currentColor;
+  position: absolute;
+  top: 1.7vw;
+  left: 0;
+}
+
+@media screen and (min-width: 62.5em) {
+  #welcome h1 svg {
+    top: 20px;
+  }
+}
+
+#welcome p {
+  color: rgba(7, 14, 20, 0.5);
+  line-height: 1.45;
+}
+
+#welcome canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+button {
+  display: inline-block;
+  padding: 0;
+  background: none;
+  border: none;
+  color: rgba(7, 14, 20, 0.3);
+  font-size: 12px;
+  margin-right: 0.1em;
+  cursor: pointer;
+}
+
+button:hover {
+  color: #ff5507;
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info {
+    max-width: 200px;
+}
+
+.intereses ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.intereses li {
+    list-style: none;
+    flex: 1;
+    text-align: center;
+    padding: 12px 20px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.08);
+    color: #000000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.intereses li:hover {
+    background: linear-gradient(135deg, #888686, #e4e8e9);
+    color: #000;
+    transform: translateY(-5px);
+}
+
+.intereses li > img {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 10px;
+    display: none;
+    transition: all 0.3s ease;
+}
+
+
+.intereses li.active img {
+    display: block;
+}
